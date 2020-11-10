@@ -33,13 +33,13 @@ form h1{
     font-family: Arial, sans-serif;
     font-weight: bold;
     color: #404054;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 label{
     font-family: 'acumin-pro',sans-serif;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 
 .passwordSection{
@@ -54,7 +54,7 @@ label{
     font-family: 'acumin-pro',sans-serif;
     font-weight: bold;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 0.8125rem;
     flex: 1;
 }
 
@@ -62,16 +62,26 @@ input{
     width: 100%;
     border: 2px solid #EBEDED;
     border-radius: 8px;
-    padding: 8px 5px 10px 20px;
-    font-size: 13px;
-    font-weight: 500;
-    font-family: Helvetica, sans-serif;
+    padding: 6px 5px 8px 20px;
+    font-size: 0.8125rem;
     background-color: #C6F3C6;
+}
+
+input::placeholder{
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
+}
+
+input:focus{
+    box-shadow: 1px 1px 4px #0F6D0F;
+    outline-style: solid;
+    outline-color: transparent;
 }
 
 button{
     width: 100%;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: Arial, sans-serif;
     font-weight: bold;
     background-color: #0F6D0F;
@@ -79,13 +89,13 @@ button{
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 8px!important;
     color: white;
-    padding-top: 8px;
-    padding-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 8px;
 }
 
 form p{
     color: #404054;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: Arial, sans-serif;
 }
 
@@ -98,18 +108,20 @@ p>a{
     position: relative;
 }
 
-.hr{
-    border: 1px solid black;
+.alternativeLogin p{
+    display: flex; 
+    flex-direction: row;
+    color: #404054;
+    font-size: 1.125rem;
+    font-family: Arial, sans-serif;
 }
 
-.alternativeLogin p{
-    color: #404054;
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-    border: 1px solid white;
-    background-color: gray;
-    width: 50%;
-    padding: 2px 20px;
+.alternativeLogin p:before, 
+.alternativeLogin p:after { 
+    content: ""; 
+    flex: 1; 
+    border-bottom: 1px solid #707070; 
+    margin: auto 10px;
 }
 
 .socialLogo{
@@ -118,8 +130,79 @@ p>a{
     padding: 6px 13px;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1440px){
     form{
-        padding: 4rem 4rem 4rem 2rem;
+        padding: 1.5rem 5rem 1.5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    form{
+        padding: 4rem 4rem 4rem 1.5rem;
+    }
+    .loginSection{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 848px){
+    form{
+        padding: 3rem 3rem 3rem 1.5rem;
+    }
+    .loginSection{
+        width: 90%;
+    }
+    input{
+        border-radius: 6px;
+        padding: 4px 5px 6px 15px;
+    }
+    input::placeholder{
+        font-size: 0.75rem;
+    }
+    button{
+        padding-top: 4px;
+        padding-bottom: 6px;
+    }
+    .socialLogo{
+        width: 35px;
+        border-radius: 8px;
+        padding: 4px 11px;
+    }
+}
+@media screen and (max-width: 767px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/aishat-yesufu/drawable-hdpi/IMG_20201013_180852.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .bg{
+        display: none;
+    }
+    form{
+        background: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .loginSection{
+        width: 85%;
+    }
+
+    h1, label, p{
+        color: #fff!important;
+    }
+
+    p>a, .passwordSection a{
+        color: gray!important;
+    }
+}
+
+@media screen and (max-width: 340px){
+    form{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 }
