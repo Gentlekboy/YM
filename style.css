@@ -4,7 +4,7 @@
 }
 
 .background{
-    background-image: url(images/aishat-yesufu/drawable-hdpi/IMG_20201013_180852.png);
+    background-image: url(images/backgroundImage.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -123,7 +123,7 @@ p>a{
 
 @media screen and (max-width: 767.99px){
     .loginSection{
-        background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.05)), url(images/aishat-yesufu/drawable-hdpi/IMG_20201013_180852.png);
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.05)), url(images/backgroundImage.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
