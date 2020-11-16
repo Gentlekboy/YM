@@ -1,16 +1,9 @@
 *{
     box-sizing: border-box;
+    margin: 0!important;
 }
 
-main{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    background-color: #F6F6F6;
-}
-
-.bg{
+.background{
     background-image: url(images/aishat-yesufu/drawable-hdpi/IMG_20201013_180852.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,12 +11,10 @@ main{
 }
 
 .loginSection{
-    place-self: center;
-    width: 75%;
+    background-color: #F6F6F6;
 }
 
 form{
-    padding: 4rem 5.5rem 4rem 2.5rem;
     background-color: white;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 10px;
@@ -130,79 +121,36 @@ p>a{
     padding: 6px 13px;
 }
 
-@media screen and (max-width: 1440px){
-    form{
-        padding: 1.5rem 5rem 1.5rem 2rem;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    form{
-        padding: 4rem 4rem 4rem 1.5rem;
-    }
+@media screen and (max-width: 767.99px){
     .loginSection{
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 848px){
-    form{
-        padding: 3rem 3rem 3rem 1.5rem;
-    }
-    .loginSection{
-        width: 90%;
-    }
-    input{
-        border-radius: 6px;
-        padding: 4px 5px 6px 15px;
-    }
-    input::placeholder{
-        font-size: 0.75rem;
-    }
-    button{
-        padding-top: 4px;
-        padding-bottom: 6px;
-    }
-    .socialLogo{
-        width: 35px;
-        border-radius: 8px;
-        padding: 4px 11px;
-    }
-}
-@media screen and (max-width: 767px){
-    main{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/aishat-yesufu/drawable-hdpi/IMG_20201013_180852.png);
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.05)), url(images/aishat-yesufu/drawable-hdpi/IMG_20201013_180852.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
-    .bg{
-        display: none;
-    }
+    
     form{
         background: transparent;
-        padding-left: 0;
-        padding-right: 0;
+        box-shadow: none;
     }
 
-    .loginSection{
-        width: 85%;
+    input{
+        background-color: #F5F5F5;
     }
 
     h1, label, p{
         color: #fff!important;
     }
 
-    p>a, .passwordSection a{
-        color: gray!important;
+    p>a{
+        color: #F9EA11!important;
     }
-}
 
-@media screen and (max-width: 340px){
-    form{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+    .socialLogo{
+        background-color: #fff;
+    }
+
+    .socialLogo:hover{
+        background-color: #000000;
     }
 }
