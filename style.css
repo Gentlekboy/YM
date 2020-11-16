@@ -38,7 +38,7 @@ label{
 }
 
 .passwordSection label{
-    flex: 2;
+    flex: 1;
 }
 
 .passwordSection a{
@@ -126,7 +126,7 @@ p>a{
     background-color: #f7f4f4;
 }
 
-@media screen and (max-width: 767.99px){
+@media screen and (max-width: 767.98px){
     .loginSection{
         background-image: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.05)), url(images/backgroundImage.png);
         background-repeat: no-repeat;
